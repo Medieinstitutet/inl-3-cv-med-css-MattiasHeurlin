@@ -1,3 +1,5 @@
-$debug: true;
+$debug: false;
+$backgroundcolor: rgba(3, 13, 29, 0.8);
 @import 'sass/_normalize.scss';
 @import 'sass/_desktop-base.scss';
+@import 'sass/animations';

@@ -12,7 +12,7 @@ main {
   height: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 400px 60px 1fr 1fr 1fr 0.3fr;
+  grid-template-rows: 380px 60px minmax(1fr, auto) minmax(1fr, auto) minmax(1fr auto) 0.3fr;
   grid-template-areas:
     "mainheader"
     "stickynav"
@@ -20,12 +20,12 @@ main {
     "row2"
     "row1"
     "footer";
-  background-image: url(bilder/background-pic.jpg); // Fri använding, av David Tovar på unspash.com
-  background-repeat: repeat-y;
+  background-image: url(bilder/background-pic2.jpg); // Fri använding, av David Tovar på unspash.com
   background-size: 100%;
 }
-section {
-  background-color: whitesmoke;
+section,
+footer {
+  background-color: $backgroundcolor;
 }
 a {
   text-decoration: none;
@@ -37,7 +37,7 @@ a {
   grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
   grid-template-areas: ". topheadleft topheadright .";
   color: white;
-  justify-content: center;
+  place-items: center;
   background: none;
   header {
     grid-area: topheadleft;
@@ -53,7 +53,6 @@ a {
   img {
     grid-area: topheadright;
     border-radius: 100px;
-    place-self: center;
   }
 }
 nav {
@@ -64,8 +63,9 @@ nav {
   top: 0;
   width: 100%;
   background-color: rgba(4, 19, 42, 0.8);
-  box-shadow: 1px 1px grey;
+  box-shadow: 5px 7px 8px #888888;
   font-family: "sora", sans-serif;
+  z-index: 4;
   ul {
     height: 60px;
     display: flex;
@@ -77,8 +77,10 @@ nav {
       list-style: none;
       font-size: 1.2rem;
       transition: all 0.3s ease-in-out;
+      animation: navanimation 0.6s ease-in-out 0.5s 2  alternate none;
       &:hover {
         font-size: 1.6rem;
+        animation: navhover 0.3s ease-in-out 0 2 alternate forwards;
       }
     }
   }
@@ -87,12 +89,44 @@ nav {
   grid-area: row3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  article {
+    padding-left: 7%;
+    padding-top: 3%;
+  }
+  article:nth-child(2){
+    box-shadow: 0 0 15px grey;
+    background-color: whitesmoke;
+    z-index: 2;
+  }
+  article:nth-child(odd) {
+    background-color: rgb(223, 227, 233);
+  }
 }
 .row2 {
   grid-area: row2;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  article{
+    width: 30%;
+    background-color: whitesmoke; 
+    z-index: 2;
+    padding-left: 3%;
+  }
+  article:nth-child(1){
+    border-right: 3px solid $backgroundcolor;
+  }
 }
 .row1 {
   grid-area: row1;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  article {
+    width: 60%;
+    background-color: whitesmoke;
+
+  }
 }
 .footer {
   grid-area: footer;

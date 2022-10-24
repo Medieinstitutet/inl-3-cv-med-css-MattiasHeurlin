@@ -1,0 +1,16 @@
+@keyframes navanimation {
+    0% {
+      font-size: 1.2rem;
+    }
+    100% {
+      font-size: 1.6rem;
+    }
+  }
+@keyframes navhover {
+    from {
+        font-size: 1.2rem
+    }
+    to {
+        font-size: 1.6rem;
+    }
+}
