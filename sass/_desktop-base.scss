@@ -12,13 +12,20 @@ main {
   height: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 400px 1fr 1fr 1fr 0.3fr;
+  grid-template-rows: 400px 60px 1fr 1fr 1fr 0.3fr;
   grid-template-areas:
     "mainheader"
+    "stickynav"
     "row3"
     "row2"
     "row1"
     "footer";
+  background-image: url(bilder/background-pic.jpg); // Fri använding, av David Tovar på unspash.com
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+section {
+  background-color: whitesmoke;
 }
 a {
   text-decoration: none;
@@ -28,15 +35,10 @@ a {
   grid-area: mainheader;
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-  grid-template-rows: 1fr 60px;
-  grid-template-areas:
-    ". topheadleft topheadright ."
-    "headnav headnav headnav headnav";
-  position: relative;
-  background-image: url(bilder/background-pic.jpg); // Fri använding, av David Tovar på unspash.com
-  background-size: cover;
+  grid-template-areas: ". topheadleft topheadright .";
   color: white;
   justify-content: center;
+  background: none;
   header {
     grid-area: topheadleft;
     font-family: "Sora", sans-serif;
@@ -53,30 +55,30 @@ a {
     border-radius: 100px;
     place-self: center;
   }
-  nav {
-     grid-area: headnav;
-     align-self: start;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: rgba(4, 19, 42, 0.8);
-    box-shadow: 1px 1px darkblue;
-    font-family: "sora", sans-serif;
-    ul {
-      height: 60px;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      margin: 0;
-      z-index: 5;
-      li {
-        list-style: none;
-        font-size: 1.2rem;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-          font-size: 1.6rem;
-        }
+}
+nav {
+  grid-area: stickynav;
+  color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(4, 19, 42, 0.8);
+  box-shadow: 1px 1px grey;
+  font-family: "sora", sans-serif;
+  ul {
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    z-index: 5;
+    li {
+      list-style: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        font-size: 1.6rem;
       }
     }
   }
