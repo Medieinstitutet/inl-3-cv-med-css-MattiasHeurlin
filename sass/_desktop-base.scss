@@ -19,16 +19,21 @@ li {
 }
 h3 {
   font-size: 1.4rem;
+  color: rgb(0, 0, 118);
   &::first-letter {
     font-size: 1.7rem;
   }
+}
+h4 {
+  font-size: 1.35rem;
+  color: rgb(0, 0, 118);
 }
 main {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 380px 60px repeat(3, minmax(350px, auto)) 0.3fr; // Note to self - se över 350px
+  grid-template-rows: 380px 60px repeat(3, minmax(370px, auto)) 0.3fr; // Note to self - se över 370px måttet
   grid-template-areas:
     "mainheader"
     "stickynav"
@@ -48,6 +53,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 .mainheader {
   grid-area: mainheader;
   display: grid;
@@ -91,10 +97,10 @@ nav {
     margin: 0;
     z-index: 5;
     li {
-     list-style: none;
-      font-size: 1.3rem; 
+      list-style: none;
+      font-size: 1.3rem;
       transition: all 0.3s ease-in-out;
-      animation: navanimation 0.6s ease-in-out 0.5s 2  alternate none;
+      animation: navanimation 0.6s ease-in-out 0.5s 2 alternate none;
       &:hover {
         font-size: 1.7rem;
       }
@@ -107,9 +113,9 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   article {
     padding-left: 7%;
-     padding-top: 3%;
+    padding-top: 3%;
   }
-  article:nth-child(2){
+  article:nth-child(2) {
     box-shadow: 0 0 15px grey;
     background-color: whitesmoke;
     z-index: 2;
@@ -117,20 +123,41 @@ nav {
   article:nth-child(odd) {
     background-color: rgb(223, 227, 233);
   }
-
+  article:nth-child(3) {
+    div > ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        text-align: center;
+        list-style: none;
+        min-width: 90px;
+        border: solid;
+        border-radius: 10px;
+        margin-right: 8px;
+        padding: 4px;
+        color: $accentcolor3;
+        background-color: $accentcolor2;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
 }
 .row2 {
   grid-area: row2;
   display: flex;
   justify-content: center;
   padding-top: 30px;
-  article{
+  article {
     width: 30%;
-    background-color: whitesmoke; 
+    background-color: whitesmoke;
     z-index: 2;
     padding-left: 3%;
+    padding-right: 3%;
   }
-  article:nth-child(1){
+  article:nth-child(1) {
     border-right: 3px solid $backgroundcolor;
   }
 }

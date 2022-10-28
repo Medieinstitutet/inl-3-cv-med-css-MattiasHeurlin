@@ -5,6 +5,7 @@
   width: 85%;
   height: 85%;
   text-align: center;
+  transition: all 0.8s ease-in-out;
 }
 article:nth-child(1) {
   position: relative;
@@ -31,20 +32,22 @@ article:nth-child(1) {
       width: 110px;
       height: 110px;
       border-radius: 20px;
-      background-color: rgba(4, 19, 42, 0.9);
-      color: whitesmoke;
+      background-color: $accentcolor2;
+      color: $accentcolor3;
       font-size: 1.3rem;
       line-height: 1.7rem;
       padding: 0;
-      transition: all 0.6s cubic-bezier(0,.72,.79,.67);
+      transition: all 0.3s cubic-bezier(0, 0.72, 0.79, 0.67);
       z-index: 4;
+      border-style: solid;
+      border-color: $accentcolor3;
       span {
         display: block;
         position: absolute;
         width: 105px;
         height: 5px;
         background-color: rgb(5, 19, 50);
-        transition: all 0.6s cubic-bezier(0,.72,.79,.67);
+        transition: all 0.6s cubic-bezier(0, 0.72, 0.79, 0.67);
       }
       span:nth-child(1) {
         top: 13px;
@@ -69,24 +72,54 @@ article:nth-child(1) {
     margin: 0;
     left: 85%;
     bottom: 10px;
+    border-style: none ;
   }
   .inputbutton:checked + div > button > span:nth-child(1) {
     transform: rotate(45deg);
-    top: 16px;
-    left: -8px;
-    width: 53px;
-    background-color: rgb(223, 227, 233);
+    top: 20px;
+    left: 0px;
+    width: 45px;
+    background-color: $accentcolor3;
   }
   .inputbutton:checked + div > button > span:nth-child(2) {
     transform: rotate(-45deg);
-    right: -3px;
-    width: 50px;
-    bottom: 14px;
-    background-color: rgb(223, 227, 233);
+    right: 0px;
+    width: 45px;
+    bottom: 20px;
+    background-color: $accentcolor3;
   }
   .inputbutton:checked + div > div {
     visibility: visible;
     background-color: rgb(223, 227, 233);
     opacity: 1;
   }
+}
+
+form {
+  background-color: rgba(0, 1, 58, 0.854);
+  width: 75%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  color: rgb(248, 222, 222);
+  box-shadow: 0px 0px 20px 7px grey;
+  border-radius: 15px;
+  label {
+    font-size: 1.1rem;
+    margin-top: 3px;
+  }
+  input {
+    border-radius: 5px;
+    margin-top: 3px;
+  }
+  textarea {
+    border-radius: 15px;
+  }
+}
+.color-combination1 {
+  background-color: $accentcolor2;
+  color: $accentcolor3;
+}
+.sendinput {
+  padding: 7px;
 }
