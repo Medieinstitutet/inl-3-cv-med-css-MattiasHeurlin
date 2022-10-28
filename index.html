@@ -15,7 +15,7 @@
 
 <body>
     <main>
-        <section class="mainheader">
+        <section class="mainheader" id="hem">
             <header>
                 <h1>Mattias Heurlin</h1>
                 <h2>Front-End Utvecklare</h2>
@@ -24,18 +24,44 @@
         </section>
         <nav>
             <ul>
-                <li><a href="">Hem</a></li>
-                <li><a href="">Portfolio</a></li>
+                <li><a href="#hem">Hem</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="">GitHub</a></li>
                 <li><a href="">LinkedIn</a></li>
             </ul>
         </nav>
         <section class="row3">
             <article>
+                <input type="checkbox" class="inputbutton">
+                <div>
+                    <button><span></span>Kontakta Mig!<span></span></button>
+                    <div class="popup-kontakt">
+                        <form>
+
+                            <label for="1name">Förnamne</label><br>
+                            <input type="text" id="1name"> <br>
+
+                            <label for="2name">Efternamn</label><br>
+                            <input type="text" id="2name"><br>
+
+                            <label for="1email">Mail</label>
+                            <input type="email" id="1email"><br>
+
+
+                            <label for="1subject">Subject</label><br>
+                            <textarea id="subject" name="1subject" cols="30"
+                                rows="4"></textarea> <br>
+
+                            <input type="submit" value="Submit">
+
+                        </form>
+                    </div>
                 <h3>Kontakt info</h3>
+                <ul>
                 <li>Mobil: 070-428-75-18</li>
                 <li>Mail:<a href="mailto:mattias@hotmail.com?subject=Kontakt-CV">mattias.heurlin@hotmail.com</a></li>
-                <button>Kontakt Form</button> <!-- Skall öppnas i mitten av sidan -->
+                </ul>
+                </div>
             </article>
             <article>
                 <h3>Kort om mig</h3>
@@ -98,7 +124,7 @@
             </article>
         </section>
         <section class="row1">
-            <article>
+            <article id="portfolio">
                 <h3>Portfolio</h3>
                 <ul>
                     <li>Placeholder</li>

@@ -1,0 +1,92 @@
+.popup-kontakt {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  text-align: center;
+}
+article:nth-child(1) {
+  position: relative;
+  .inputbutton {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    width: 110px;
+    height: 110px;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 5;
+  }
+  div {
+    button {
+      position: absolute;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      bottom: 25px;
+      width: 110px;
+      height: 110px;
+      border-radius: 20px;
+      background-color: rgba(4, 19, 42, 0.9);
+      color: whitesmoke;
+      font-size: 1.3rem;
+      line-height: 1.7rem;
+      padding: 0;
+      transition: all 0.6s cubic-bezier(0,.72,.79,.67);
+      z-index: 4;
+      span {
+        display: block;
+        position: absolute;
+        width: 105px;
+        height: 5px;
+        background-color: rgb(5, 19, 50);
+        transition: all 0.6s cubic-bezier(0,.72,.79,.67);
+      }
+      span:nth-child(1) {
+        top: 13px;
+      }
+      span:nth-child(2) {
+        bottom: 13px;
+      }
+    }
+  }
+  .inputbutton:checked {
+    width: 45px;
+    height: 45px;
+    left: 79%;
+    bottom: 10px;
+  }
+  .inputbutton:checked + div > button {
+    color: rgba(4, 19, 42, 0.9);
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    font-size: 0.1rem;
+    margin: 0;
+    left: 85%;
+    bottom: 10px;
+  }
+  .inputbutton:checked + div > button > span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 16px;
+    left: -8px;
+    width: 53px;
+    background-color: rgb(223, 227, 233);
+  }
+  .inputbutton:checked + div > button > span:nth-child(2) {
+    transform: rotate(-45deg);
+    right: -3px;
+    width: 50px;
+    bottom: 14px;
+    background-color: rgb(223, 227, 233);
+  }
+  .inputbutton:checked + div > div {
+    visibility: visible;
+    background-color: rgb(223, 227, 233);
+    opacity: 1;
+  }
+}
