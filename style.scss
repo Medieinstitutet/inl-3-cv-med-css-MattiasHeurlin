@@ -1,9 +1,11 @@
 $debug: false;
 $backgroundcolor: rgba(3, 13, 29, 0.8);
 $accentcolor2: rgb(4, 19, 42);
- $accentcolor3: rgb(196, 83, 58);
-// $accentcolor3: rgb(87, 237, 217);
+$accentcolor3: rgb(240, 104, 74);
 @import 'sass/_normalize.scss';
 @import 'sass/_desktop-base.scss';
 @import 'sass/animations';
-@import 'sass/kontaktform-button'
+@import 'sass/kontaktform-button';
+@media screen and(max-width: 600px) {
+    @import 'sass/_mobilresponsiv.scss';
+}
