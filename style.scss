@@ -6,6 +6,6 @@ $accentcolor3: rgb(240, 104, 74);
 @import 'sass/_desktop-base.scss';
 @import 'sass/animations';
 @import 'sass/kontaktform-button';
-@media screen and(max-width: 600px) {
+@media screen and(max-width: 650px) {
     @import 'sass/_mobilresponsiv.scss';
 }
