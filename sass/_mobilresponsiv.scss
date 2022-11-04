@@ -1,0 +1,43 @@
+main {
+  grid-template-rows: 480px 60px repeat(3, minmax(300px, auto)) 0.3fr;
+  background-size: cover;
+}
+.mainheader {
+  padding-top: 3%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "topheadright"
+    "topheadleft";
+  header > h1 {
+    font-size: 2.5rem;
+  }
+  header > h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.row3 {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, minmax(400px, auto));
+  article:nth-child(2),
+  article:nth-child(3) {
+    padding-right: 5%;
+  }
+}
+
+.row2 {
+  flex-direction: column;
+  gap: 20px;
+  article {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+.row1 > article > h2 {
+  color: whitesmoke;
+}
+.row1 > article {
+  width: 90%;
+  background-color: rgba(223, 227, 233, 0.3);
+}
