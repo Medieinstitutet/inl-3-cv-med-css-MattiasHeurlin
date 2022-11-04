@@ -79,7 +79,6 @@ a {
   header {
     grid-area: topheadleft;
     font-family: "Sora", sans-serif;
-    font-display: swap;
     text-align: center;
 
     h1 {
@@ -277,7 +276,7 @@ nav {
   grid-area: footer;
   height: 130px;
   span {
-    display:block;
+    display: block;
     color: white;
     margin: 0 auto;
     margin-top: 10px;
