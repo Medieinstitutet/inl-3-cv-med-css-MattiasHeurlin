@@ -275,13 +275,14 @@ nav {
 .footer {
   grid-area: footer;
   height: 140px;
-  a > h5 {
-    position: relative;
+  width: 100%;
+  a >   span {
+    display:block;
     color: white;
     margin: 0 auto;
-    transform: rotate(-90deg);
-    width: 80px;
-    height: 90px;
+    margin-top: 10px;
+    text-align: center;
     font-size: 4rem;
+    margin-top: 10px
   }
 }
